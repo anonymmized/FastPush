@@ -25,11 +25,14 @@ end_time=$(date +%s)
 
 push_time=$((end_time - start_time))
 
+echo
 echo "✅ Git Auto Commit Report"
 echo "-------------------------"
-echo "📝 Message: $commit_msg"
-echo "📊 Changes: $stats"
-echo "📁 Files: +$files_added  ~$files_modified  -$files_deleted"
-echo "📦 Size: $size_bytes bytes"
-echo "⏱ Push time: ${push_time}s"
-echo "🚀 Status: Done"
+
+printf "📝 %-12s %s\n" "Message:" "$commit_msg"
+printf "📊 %-12s %s\n" "Changes:" "$stats"
+printf "📁 %-12s +%4d  ~%4d  -%4d\n" "Files:" \
+    "$files_added" "$files_modified" "$files_deleted"
+printf "📦 %-12s %6d bytes\n" "Size:" "$size_bytes"
+printf "⏱ %-12s %4ds\n" "Push time:" "$push_time"
+printf "🚀 %-12s %s\n" "Status:" "Done"
