@@ -24,6 +24,28 @@ neat summary at the end.
 
 Enter a commit message when prompted --- FastPush handles the rest.
 
+## ⚡ Run with a single word (alias)
+
+Add an alias to your shell config:
+
+### Bash / Zsh
+
+``` bash
+alias fastpush="~/path/to/fastpush.sh"
+```
+
+Reload your shell:
+
+``` bash
+source ~/.bashrc   # or ~/.zshrc
+```
+
+Now you can run FastPush from anywhere:
+
+``` bash
+fastpush
+```
+
 ## 📦 Requirements
 
 -   Git
